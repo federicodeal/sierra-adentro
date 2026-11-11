@@ -6,4 +6,4 @@ Identidad visual: **Cielo nocturno** (opción C). Logotipo en `assets/logo.svg` 
 
 Vista previa: [federicodeal.github.io/sierra-adentro](https://federicodeal.github.io/sierra-adentro/)
 
-El loteo definitivo (5 o 6 chacras privadas) todavía se está definiendo. El plano publicado es preliminar y no es un plano oficial. Los precios no se publican (Consultar). WhatsApp y correo figuran como placeholders hasta confirmarlos. El mapa muestra Aiguá, no el predio exacto.
+El loteo queda en seis chacras privadas (1, 3, 4, 5, 6 y 7) y la chacra 2 como área común. El plano publicado es preliminar (todavía muestra el esquema de siete chacras) y no es un plano oficial. Los precios no se publican (Consultar). WhatsApp y correo figuran como placeholders hasta confirmarlos. El mapa muestra Aiguá, no el predio exacto.
