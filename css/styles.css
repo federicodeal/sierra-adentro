@@ -345,6 +345,19 @@ h1, h2, h3, h4 {
   color: var(--color-hero);
 }
 
+.btn--solid {
+  background: var(--color-night);
+  color: var(--color-paper);
+  border-color: var(--color-night);
+}
+
+.btn--solid:hover,
+.btn--solid:focus-visible {
+  background: var(--color-dusk);
+  border-color: var(--color-dusk);
+  color: var(--color-paper);
+}
+
 .hero__scroll {
   position: absolute;
   bottom: 1.75rem;
@@ -376,6 +389,44 @@ h1, h2, h3, h4 {
 /* Manifesto */
 .manifesto {
   background: var(--color-paper);
+}
+
+.manifesto-summary p {
+  margin-bottom: 0.85rem;
+}
+
+.manifesto-toggle-wrap {
+  margin: 2rem 0 0;
+}
+
+.btn-text {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  padding: 0 0 0.15rem;
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-dusk);
+  border-bottom: 1px solid var(--color-star);
+  cursor: pointer;
+}
+
+.btn-text:hover,
+.btn-text:focus-visible {
+  color: var(--color-ink);
+  border-color: var(--color-ink);
+}
+
+.manifesto-full[hidden] {
+  display: none;
+}
+
+.manifesto-full {
+  margin-top: 3.25rem;
+  padding-top: 0.25rem;
 }
 
 .prose p {
@@ -482,6 +533,50 @@ h1, h2, h3, h4 {
   }
 }
 
+/* Loteo options */
+.option-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 0 0 1.25rem;
+}
+
+.option-tab {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.65rem 1.05rem;
+  border: 1px solid var(--color-sand);
+  background: var(--color-paper);
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--color-ink);
+}
+
+.option-tab:hover,
+.option-tab:focus-visible {
+  border-color: var(--color-star);
+}
+
+.loteo-opciones:has(#opcion-a:checked) label[for="opcion-a"],
+.loteo-opciones:has(#opcion-b:checked) label[for="opcion-b"] {
+  background: var(--color-night);
+  color: var(--color-paper);
+  border-color: var(--color-night);
+}
+
+.option-line {
+  max-width: 42rem;
+  margin: 0 0 1.75rem;
+  color: var(--color-ink-soft);
+  font-size: 1.05rem;
+}
+
+.common .option-tab {
+  background: var(--color-paper);
+}
+
 /* Lots */
 .plan {
   margin: 0 0 2.5rem;
@@ -557,6 +652,55 @@ h1, h2, h3, h4 {
 .common p {
   font-family: var(--font-serif);
   font-size: 1.15rem;
+  margin: 0 0 1rem;
+}
+
+.common__grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.common-list {
+  list-style: none;
+  margin: 0.25rem 0 1.35rem;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.common-list li {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  padding-left: 1.15rem;
+  position: relative;
+}
+
+.common-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.5rem;
+  height: 1px;
+  background: var(--color-star);
+}
+
+.common .note {
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+}
+
+.common .plan {
+  margin: 0;
+}
+
+@media (min-width: 840px) {
+  .common__grid {
+    grid-template-columns: 1fr 1.15fr;
+    gap: 3rem;
+    align-items: start;
+  }
 }
 
 /* Location */
@@ -684,6 +828,23 @@ h1, h2, h3, h4 {
   margin-bottom: 0.2rem;
 }
 
+.contact-list a {
+  color: var(--color-ink);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-sand);
+}
+
+.contact-list a:hover,
+.contact-list a:focus-visible {
+  color: var(--color-dusk);
+  border-color: var(--color-star);
+}
+
+.contact-actions {
+  margin: 2rem 0 0;
+}
+
 .placeholder {
   color: var(--color-placeholder);
   font-family: var(--font-sans);
@@ -707,6 +868,22 @@ h1, h2, h3, h4 {
 
 .footer-inner p {
   margin: 0.35rem 0 0;
+}
+
+.footer-contact {
+  margin-top: 0.75rem !important;
+  font-size: 0.95rem;
+}
+
+.footer-contact a {
+  color: var(--color-sand);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-star) 55%, transparent);
+}
+
+.footer-contact a:hover,
+.footer-contact a:focus-visible {
+  color: var(--color-star);
 }
 
 .footer-note {

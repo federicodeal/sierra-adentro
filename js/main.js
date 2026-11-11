@@ -42,6 +42,54 @@
     });
   }
 
+  const opcionA = document.getElementById("opcion-a");
+  const opcionB = document.getElementById("opcion-b");
+  if (opcionA && opcionB) {
+    function aplicarOpcion() {
+      const esB = opcionB.checked;
+      document.querySelectorAll(".only-a").forEach(function (el) { el.hidden = esB; });
+      document.querySelectorAll(".only-b").forEach(function (el) { el.hidden = !esB; });
+    }
+
+    function leerHash() {
+      if (location.hash === "#opcion-b") opcionB.checked = true;
+      else if (location.hash === "#opcion-a") opcionA.checked = true;
+      aplicarOpcion();
+    }
+
+    opcionA.addEventListener("change", function () {
+      if (opcionA.checked) history.replaceState(null, "", "#opcion-a");
+      aplicarOpcion();
+    });
+    opcionB.addEventListener("change", function () {
+      if (opcionB.checked) history.replaceState(null, "", "#opcion-b");
+      aplicarOpcion();
+    });
+    window.addEventListener("hashchange", leerHash);
+    leerHash();
+  }
+
+  const manifestoToggle = document.querySelector(".js-manifesto-toggle");
+  const manifestoFull = document.getElementById("manifiesto-completo");
+  if (manifestoToggle && manifestoFull) {
+    const openLabel = "Leer el manifiesto completo";
+    const closeLabel = "Cerrar el manifiesto";
+
+    function setManifestoOpen(open) {
+      manifestoFull.hidden = !open;
+      manifestoToggle.setAttribute("aria-expanded", String(open));
+      manifestoToggle.textContent = open ? closeLabel : openLabel;
+    }
+
+    manifestoToggle.addEventListener("click", function () {
+      setManifestoOpen(manifestoFull.hidden);
+    });
+
+    if (location.hash === "#manifiesto-completo") {
+      setManifestoOpen(true);
+    }
+  }
+
   const lightbox = document.getElementById("lightbox");
   if (!lightbox) return;
 
